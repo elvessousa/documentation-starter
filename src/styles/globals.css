@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --base-font: 'Inter', Arial, Helvetica, sans-serif;
+  --base-size: 16px;
+  --base-pad: 30px;
+  --nav-height: 2.5em;
+  --page-back: #fff;
+  --side-back: rgba(0, 0, 0, 0.015);
+  --hero-back: #000;
+  --hero-color: #fff;
+  --hero-link: #fff;
+  --head-color: #000;
+  --link-color: #000;
+  --text-color: #333;
+  --line-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+  font-family: var(--base-font);
+  font-size: var(--base-size);
+  height: 100vh;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track,
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb {
+  background-color: #000;
+}
+
+main {
+  display: grid;
+  grid-template-areas: 'a c c';
+  grid-template-columns: 250px 1fr 20vw;
+  height: 100vh;
+  padding-top: var(--nav-height);
+  width: 100%;
+}
+
+.has-toc {
+  grid-template-areas: 'a c t';
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.6em;
+  margin: 0;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+blockquote {
+  font-size: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  display: flex;
+  position: relative;
+}
+
+.hero {
+  align-items: center;
+  background: var(--hero-back);
+  bottom: 0;
+  color: var(--hero-color);
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: 5vw;
+}
+
+.hero a {
+  color: var(--hero-link);
+}
+
+.header {
+  align-items: center;
+  background: var(--page-back);
+  border-bottom: 1px solid var(--line-color);
+  display: flex;
+  left: 0;
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.brand {
+  font-weight: 900;
+}
+
+.navigation {
+  margin-left: auto;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation a {
+  padding: 0.5em;
+}
+
+.aside {
+  background-color: var(--side-back);
+  border-right: 1px solid var(--line-color);
+  grid-area: a;
+  overflow-y: scroll;
+  padding: var(--base-pad);
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+.aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aside ul a {
+  display: block;
+  line-height: 1.6em;
+  margin-top: 0.6em;
+}
+
+.aside ul ul a {
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin: 0;
+  padding: 0.25em 0.5em;
+}
+
+.aside ul ul .active {
+  background: #eee;
+}
+
+.toc {
+  border-left: 1px solid var(--line-color);
+  grid-area: t;
+  padding: var(--base-pad);
+}
+
+.toc h4 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.toc a {
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1em;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+  display: block;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.toc a:hover {
+  opacity: 1;
+}
+
+.toc .sub {
+  margin-left: 0.5em;
+  margin-top: 0.3rem;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.content {
+  grid-area: c;
+  overflow-y: scroll;
+  padding: var(--base-pad);
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+.content p {
+  max-width: 40em;
+}
+
+.prism-code {
+  margin: 2em auto;
+  padding: 2.5em 1em 0;
+  position: relative;
+  overflow-x: scroll;
+}
+
+.prism-code[data-language]::before {
+  content: attr(data-language);
+  font-family: var(--base-font);
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 1;
+}
+
+.code-title {
+  background: var(--shadow-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eee;
+  font-family: var(--base-font);
+  font-size: 14px;
+  left: 0;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.footer {
+  border-top: 1px solid var(--line-color);
+  padding: 1em;
+}
+
+.footer .navigation {
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8em;
+  margin: 0.5em 0;
+  text-align: center;
+}

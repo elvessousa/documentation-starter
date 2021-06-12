@@ -1,0 +1,34 @@
+sidebar:
+  en:
+    - label: 'Home'
+      link: '/'
+  
+    - label: 'Getting started'
+      link: '/docs'
+      items:
+        - label: 'Install'
+          link: '/en/install'
+        - label: 'First Steps'
+          link: '/en/first-steps'
+
+  pt:
+    - label: 'Início'
+      link: '/'
+    
+    - label: 'Introdução'
+      link: '/pt/intro'
+      items:
+        - label: 'Instalação'
+          link: '/pt/instalacao'
+        - label: 'Primeiros Passos'
+          link: '/pt/primeiros-passos'
+        - label: 'Links laterais'
+          link: '/pt/lateral'
+
+    - label: 'Extendendo'
+      link: '/pt/lateral'
+      items:
+        - label: 'Aparência'
+          link: '/pt/aparencia'
+        - label: 'Componentes'
+          link: '/pt/componentes'
