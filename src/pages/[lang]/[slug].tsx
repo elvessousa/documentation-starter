@@ -1,8 +1,8 @@
-import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 
 import { getAllIds, getContentData } from '../../lib/docs';
 import Layout from '../../components/Layout';
+import makeToc from '../../utils/makeToc';
 
 type MarkdownData = {
   docData: {
@@ -17,9 +17,10 @@ type MarkdownData = {
 
 export default function DocPage({ docData }: MarkdownData) {
   const { title, toc, contentHtml } = docData;
+  const headings = makeToc(contentHtml);
 
   return (
-    <Layout className="docs" toc={toc}>
+    <Layout className="docs" toc={toc} headings={headings}>
       <h1>{title}</h1>
       <div
         className="post-text"

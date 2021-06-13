@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 import prism from 'remark-prism';
+import slug from 'remark-slug';
 
 const docsDirectory = path.resolve(process.cwd(), 'content', 'docs');
 const pagesDirectory = path.resolve(process.cwd(), 'content', 'pages');
@@ -49,8 +50,9 @@ export async function getContentData(id: string, type = 'docs') {
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
   const frontMatter = matter(fileContents);
   const processedContent = await remark()
-    .use(html)
+    .use(slug)
     .use(prism)
+    .use(html)
     .process(frontMatter.content);
 
   const contentHtml = processedContent.toString();

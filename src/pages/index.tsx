@@ -7,7 +7,7 @@ export default function Home() {
         <div className="hero-content">
           <h1>Hello World!</h1>
           <p>
-            This a documentation starter for Gatsby. <br />
+            This a documentation starter for Next.js. <br />
             <small>TypeScript + Next.js + Markdown</small>
           </p>
         </div>

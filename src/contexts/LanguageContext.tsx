@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 type LanguageContextData = {
   locale: string;
@@ -16,7 +16,6 @@ export function LanguageProvider({ children }) {
     }
 
     const language = localStorage.getItem('lang') || locale;
-    console.log(language);
     setLocale(language);
   }, [locale]);
 

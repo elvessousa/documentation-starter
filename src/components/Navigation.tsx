@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 
@@ -10,6 +9,7 @@ export default function Navigation() {
     if (!window) {
       return;
     }
+
     localStorage.setItem('lang', language);
     setLocale(language);
   }
