@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useLanguage } from '../hooks/useLanguage';
 
 export default function Navigation() {
-  const { locale, setLocale } = useLanguage();
+  const { t, locale, setLocale } = useLanguage();
   const language = locale === 'en' ? 'pt' : 'en';
 
   function handleLocaleChange(language: string) {
@@ -19,12 +19,12 @@ export default function Navigation() {
       <ul>
         <li>
           <Link href="/docs">
-            <a>Documentation</a>
+            <a>{t('docs')}</a>
           </Link>
         </li>
         <li>
           <Link href="/about">
-            <a>About</a>
+            <a>{t('about')}</a>
           </Link>
         </li>
         <li>

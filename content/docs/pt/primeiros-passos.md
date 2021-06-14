@@ -5,11 +5,11 @@ slug: 'primeiros-passos'
 toc: true
 ---
 
-## Criação de conteúdo
+## Criando os arquivos
 
 Para adicionar conteúdo, basta criar arquivos markdown e salvos na pasta **/docs** dentro do diretório com a sigla ISO do idioma desejado. Este modelo vem com suporte a inglês (en) e português (pt) por padrão.
 
-## Cabeçalho
+## Frontmatter
 
 Todo arquivo markdown deste modelo deve ter um cabeçalho para informar ao Gatsby com tratar o conteúdo e como ele estará disponível. Isto também é chamado de _frontmatter_. Eis um modelo de como é este cabeçalho:
 
@@ -37,6 +37,6 @@ Segue abaixo uma breve explicação de cada linha:
 - **chapter**: capítulo
 - **thumbnail**: miniatura para compartilhamento
 
-## Formatação de conteúdo
+## Markdown
 
 A formatação do conteúdo segue o padrão do markdown. Caso precise de algo mais personalizado, tags HTML e componentes MDX são suportados.

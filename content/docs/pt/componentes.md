@@ -13,7 +13,6 @@ Os componentes estão todos em TypeScript, para evitar bugs e facitar o desenvol
 ## Componentes que acompanham este pacote
 
 - **Footer.tsx**: rodapé no final da página
-- **Head.tsx**: contém meta tags para Search Engine Optimization (SEO)
 - **Layout.tsx**: responsável pela estrutura básica para as páginas
 - **Navigation.tsx**: tem a estrutura para a barra de navegação superior e inferior.
 - **Sidebar.tsx**: é a barra lateral que renderiza os links

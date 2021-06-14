@@ -1,9 +1,9 @@
 ---
-lang: pt
+lang: en
 title: 'Intro'
 slug: 'intro'
 ---
 
-> Welcome to docs-starter.
+> Welcome to documentation-starter.
 
-> This site uses the Gatsby, with typescript and Extended Markdown (MDX) support. Learn more by clicking on the links at left.
+This site uses the Next.js with typescript and Extended Markdown (MDX) support. Learn more by clicking on the links at left.

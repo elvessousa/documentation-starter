@@ -4,12 +4,21 @@ sidebar:
       link: '/'
   
     - label: 'Getting started'
-      link: '/docs'
+      link: '/en/intro'
       items:
         - label: 'Install'
-          link: '/en/install'
+          link: '/en/installation'
         - label: 'First Steps'
           link: '/en/first-steps'
+        - label: 'Sidebar links'
+          link: '/en/sidebar'
+
+    - label: 'Extending'
+      items:
+        - label: 'Appearance'
+          link: '/en/appearance'
+        - label: 'Components'
+          link: '/en/components'
 
   pt:
     - label: 'Início'
@@ -26,7 +35,6 @@ sidebar:
           link: '/pt/lateral'
 
     - label: 'Extendendo'
-      link: '/pt/lateral'
       items:
         - label: 'Aparência'
           link: '/pt/aparencia'

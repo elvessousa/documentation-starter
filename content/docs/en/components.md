@@ -13,7 +13,6 @@ The components are all in typescript, to avoid bugs at development time.
 ## Components in this package
 
 - **Footer.tsx**: page footer
-- **Head.tsx**: has Search Engine Optimization (SEO) metatags
 - **Layout.tsx**: contains the basic structure for the pages
 - **Navigation.tsx**: it is the structure for top and bottom navigation links
 - **Sidebar.tsx**: the sidebar where the links are rendered

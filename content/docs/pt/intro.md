@@ -4,6 +4,6 @@ title: 'Introdução'
 slug: 'intro'
 ---
 
-> Bem vindo(a) ao docs-starter.
+> Bem vindo(a) ao documentation-starter.
 
-> Este site usa o Gatsby por debaixo dos panos, com TypeScript e com suporte para Markdown Extendido (MDX). Saiba mais cliicando nos links ao lado.
+Este site usa o Next.js por debaixo dos panos, com TypeScript e com suporte para Markdown Extendido (MDX). Saiba mais cliicando nos links ao lado.

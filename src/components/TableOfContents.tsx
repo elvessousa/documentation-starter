@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useLanguage } from '../hooks/useLanguage';
 
 interface TocProps {
   headings: {
@@ -9,9 +10,11 @@ interface TocProps {
 }
 
 export default function TableOfContents({ headings }: TocProps) {
+  const { t } = useLanguage();
+
   return (
     <nav className="toc">
-      <h4>In this page</h4>
+      <h4>{t('inthispage')}</h4>
       <ul>
         {headings?.map((heading) => (
           <li key={heading.value}>

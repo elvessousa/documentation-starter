@@ -16,9 +16,13 @@ export function ItemLink({ label, link, items }: MenuLink) {
   return (
     <>
       <li key={label}>
-        <Link href={link}>
-          <a>{label}</a>
-        </Link>
+        {link ? (
+          <Link href={link}>
+            <a>{label}</a>
+          </Link>
+        ) : (
+          <h4>{label}</h4>
+        )}
       </li>
       {items && (
         <ul>

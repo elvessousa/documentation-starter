@@ -27,10 +27,7 @@ export default function Layout({
   return (
     <>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
-        />
+        <title>Documentation Starter</title>
       </Head>
       <main className={layoutClass}>
         <header className="header">

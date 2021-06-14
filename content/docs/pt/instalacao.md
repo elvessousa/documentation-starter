@@ -15,28 +15,18 @@ $ npm install
 $ yarn install
 ```
 
-Estes irão instalar as dependências necessárias para que o Gatsby, que roda estaaplicação por detrás dos panos, possa ser executado.
+Estes irão instalar as dependências necessárias para que o Next.js, que roda estaaplicação por detrás dos panos, possa ser executado.
 
 ## Executar em ambiente local
 
 Para rodar em ambiente de desenvolvimento, basta rodar o comando:
 
 ```shell title=NPM
-npm run develop
+npm run dev
 ```
 
 ```shell title=Yarn
-yarn develop
+yarn dev
 ```
 
-Estes irão iniciar um servidor para que você possa visualizar as alterações que fizer neste modelo no navegador de sua preferência. Vários comandos irão aparecer em tela, mas assim que visualizar a mensagem abaixo, basta acessar o endereço informado `http://localhost:8000` e começar a usar.
-
-```shell title=Terminal
-You can now view docs-starter in the browser.
-⠀
-  http://localhost:8000/
-⠀
-View GraphiQL, an in-browser IDE, to explore your site's data and schema
-⠀
-  http://localhost:8000/___graphql
-```
+Estes irão iniciar um servidor para que você possa visualizar as alterações que fizer neste modelo no navegador de sua preferência. Vários comandos irão aparecer em tela, mas assim que visualizar a mensagem abaixo, basta acessar o endereço informado `http://localhost:3000` e começar a usar.
