@@ -2,6 +2,7 @@
 lang: en
 title: 'Intro'
 slug: 'intro'
+aside: true
 ---
 
 > Welcome to documentation-starter.

@@ -14,7 +14,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
           />
-          <title>Documentation Starter - Next.js</title>
         </Head>
         <body>
           <Main />

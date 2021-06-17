@@ -4,39 +4,37 @@ sidebar:
       link: '/'
   
     - label: 'Getting started'
-      link: '/en/intro'
       items:
         - label: 'Install'
-          link: '/en/installation'
+          link: 'installation'
         - label: 'First Steps'
-          link: '/en/first-steps'
+          link: 'first-steps'
         - label: 'Sidebar links'
-          link: '/en/sidebar'
+          link: 'sidebar'
 
     - label: 'Extending'
       items:
         - label: 'Appearance'
-          link: '/en/appearance'
+          link: 'appearance'
         - label: 'Components'
-          link: '/en/components'
+          link: 'components'
 
   pt:
     - label: 'Início'
       link: '/'
     
     - label: 'Introdução'
-      link: '/pt/intro'
       items:
         - label: 'Instalação'
-          link: '/pt/instalacao'
+          link: 'instalacao'
         - label: 'Primeiros Passos'
-          link: '/pt/primeiros-passos'
+          link: 'primeiros-passos'
         - label: 'Links laterais'
-          link: '/pt/lateral'
+          link: 'lateral'
 
     - label: 'Extendendo'
       items:
         - label: 'Aparência'
-          link: '/pt/aparencia'
+          link: 'aparencia'
         - label: 'Componentes'
-          link: '/pt/componentes'
+          link: 'componentes'

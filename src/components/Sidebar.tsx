@@ -13,6 +13,7 @@ type MenuLink = {
 };
 
 export function ItemLink({ label, link, items }: MenuLink) {
+  const { locale } = useLanguage();
   return (
     <>
       <li key={label}>
@@ -28,7 +29,7 @@ export function ItemLink({ label, link, items }: MenuLink) {
         <ul>
           {items.map((item) => (
             <li key={item.label}>
-              <Link href={item.link}>
+              <Link href={`/${locale}/docs/${item.link}`}>
                 <a>{item.label}</a>
               </Link>
             </li>

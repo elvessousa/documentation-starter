@@ -1,3 +1,7 @@
+.full-page {
+  grid-template-areas: 'c c c';
+}
+
 .has-toc {
   grid-template-areas: 'a c t';
 }
@@ -151,6 +155,10 @@
   padding: var(--base-pad);
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
+}
+
+.full-page .content {
+  margin: 0 auto;
 }
 
 .content:hover {

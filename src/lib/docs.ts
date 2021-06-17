@@ -9,9 +9,10 @@ import slug from 'remark-slug';
 const docsDirectory = path.resolve(process.cwd(), 'content', 'docs');
 const pagesDirectory = path.resolve(process.cwd(), 'content', 'pages');
 
-type DocumentationFrontmatter = {
+type ContentFrontmatter = {
   title: string;
-  toc: boolean;
+  toc?: boolean;
+  aside?: boolean;
   thumbnail: string;
 };
 
@@ -34,11 +35,12 @@ export function getAllFileNames(directoryPath: string, filesList = []) {
 // Get IDs for posts
 export function getAllIds(type = 'docs') {
   const dir = type === 'page' ? pagesDirectory : docsDirectory;
+  const param = type === 'page' ? 'id' : 'slug';
   const fileNames = getAllFileNames(dir);
 
   return fileNames.map((fileName) => ({
     params: {
-      slug: fileName.split('/')[1].replace(/\.md$/, ''),
+      [param]: fileName.split('/')[1].replace(/\.md$/, ''),
       lang: fileName.split('/')[0],
     },
   }));
@@ -59,7 +61,7 @@ export async function getContentData(id: string, type = 'docs') {
 
   return {
     id,
-    ...(frontMatter.data as DocumentationFrontmatter),
+    ...(frontMatter.data as ContentFrontmatter),
     contentHtml,
   };
 }

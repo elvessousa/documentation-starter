@@ -18,12 +18,12 @@ export default function Navigation() {
     <nav className="navigation">
       <ul>
         <li>
-          <Link href="/docs">
+          <Link href={`/${locale}/intro`}>
             <a>{t('docs')}</a>
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href={`/${locale}/${t('about').toLowerCase()}`}>
             <a>{t('about')}</a>
           </Link>
         </li>

@@ -2,25 +2,24 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 
 import { getAllIds, getContentData } from '../../lib/docs';
 import Layout from '../../components/Layout';
-import makeToc from '../../utils/makeToc';
 
 type MarkdownData = {
-  docData: {
+  pageData: {
     slug: string;
     lang: string;
-    toc: boolean;
+    aside: boolean;
     thumbnail: string;
     title: string;
     contentHtml: string;
   };
 };
 
-export default function DocPage({ docData }: MarkdownData) {
-  const { title, toc, contentHtml } = docData;
-  const headings = makeToc(contentHtml);
+export default function Page({ pageData }: MarkdownData) {
+  const { title, aside, contentHtml } = pageData;
+  const pageClass = aside ? 'page' : 'full-page';
 
   return (
-    <Layout className="docs" toc={toc} headings={headings}>
+    <Layout className={pageClass} hideAside={!aside}>
       <h1>{title}</h1>
       <div
         className="post-text"
@@ -31,18 +30,18 @@ export default function DocPage({ docData }: MarkdownData) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const docData = await getContentData(`/${params.lang}/${params.slug}`);
+  const pageData = await getContentData(`/${params.lang}/${params.id}`, 'page');
 
   return {
     props: {
-      locale: params?.lang || 'pt',
-      docData,
+      locale: params?.lang || 'en',
+      pageData,
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getAllIds();
+  const paths = getAllIds('page');
 
   return {
     paths,
