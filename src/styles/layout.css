@@ -13,7 +13,7 @@
 
 .hero {
   align-items: center;
-  background: var(--hero-back);
+  background: var(--hero-back) url(/back.svg) no-repeat center;
   bottom: 0;
   color: var(--hero-color);
   display: flex;
@@ -24,6 +24,16 @@
   text-align: center;
   top: 0;
   z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  background: linear-gradient(to-bottom, #fff 0%, var(--hero-back) 100%);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
 }
 
 .hero h1 {
@@ -49,6 +59,19 @@
 
 .brand {
   font-weight: 900;
+  margin-left: 2em;
+}
+
+.brand::before {
+  content: '';
+  display: inline-block;
+  background: url(/docs.svg) center no-repeat;
+  width: 2em;
+  position: absolute;
+
+  top: 0;
+  left: 1em;
+  bottom: 0;
 }
 
 .navigation {

@@ -32,7 +32,7 @@ export default function Layout({
       <main className={layoutClass}>
         <header className="header">
           <Link href="/">
-            <a className="brand">Docs</a>
+            <a className="brand">Documentation Starter</a>
           </Link>
           <Navigation />
         </header>
