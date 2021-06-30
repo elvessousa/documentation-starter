@@ -29,14 +29,4 @@ npm run develop
 yarn develop
 ```
 
-These will start a server so that you can view the changes you make in this template in your preference browser. Multiple commands will appear on screen, but as soon as you view the message below, just access the informed address `http://localhost:8000` and start using.
-
-```shell title=Terminal
-You can now view docs-starter in the browser.
-⠀
-  http://localhost:8000/
-⠀
-View GraphiQL, an in-browser IDE, to explore your site's data and schema
-⠀
-  http://localhost:8000/___graphql
-```
+These will start a server so that you can view the changes you make in this template in your preference browser. Multiple commands will appear on screen, but as soon as you view the message below, just access the informed address `http://localhost:3000` and start using.

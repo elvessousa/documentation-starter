@@ -28,9 +28,7 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <button onClick={() => handleLocaleChange(language)}>
-            {language}
-          </button>
+          <button onClick={() => handleLocaleChange(language)}>{locale}</button>
         </li>
       </ul>
     </nav>
