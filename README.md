@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documentation Starter
 
-## Getting Started
+![Screenshot](./documentation-starter.png)
+_Screenshot_
 
-First, run the development server:
+A TypeScript starter for Next.js, focused on creating documentation.
 
-```bash
-npm run dev
-# or
-yarn dev
+## Plugins
+
+- Markdown for content
+- Prism for code syntax on pages
+- Remark Slug for adding anchors to titles
+
+## Getting started
+
+Clone this repo and do the following:
+
+1. `npm install` or `yarn`;
+2. `yarn start`;
+
+To view the project, open `http://localhost:3000` in your browser.
+
+## Creating content
+
+Save your markdown files inside the folder `/content/docs/[your-language-iso]`. Sample files are available for a quick start. Pages can be created in the same way, using the folder `/content/pages/[your-language-iso]`. Other instructions are included in the `docs` folder. How convenient!
+
+## Configuring the sidebar
+
+To configure which links will appear on the sidebar, edit the file `/src/config/sidebar.yml`. Follow the scheme below:
+
+```yaml
+sidebar:
+  en:
+    - label: 'Home'
+      link: '/'
+
+    - label: 'Getting started'
+      items:
+        - label: 'Install'
+          link: 'installation'
+        - label: 'First Steps'
+          link: 'first-steps'
+        - label: 'Sidebar links'
+          link: 'sidebar'
+
+    - label: 'Extending'
+      items:
+        - label: 'Appearance'
+          link: 'appearance'
+        - label: 'Components'
+          link: 'components'
+
+  pt:
+    - label: 'Início'
+      link: '/'
+
+    - label: 'Introdução'
+      items:
+        - label: 'Instalação'
+          link: 'instalacao'
+        - label: 'Primeiros Passos'
+          link: 'primeiros-passos'
+        - label: 'Links laterais'
+          link: 'lateral'
+
+    - label: 'Extendendo'
+      items:
+        - label: 'Aparência'
+          link: 'aparencia'
+        - label: 'Componentes'
+          link: 'componentes'
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Fork this repository;
+2. Create your branch: `git checkout -b my-new-feature`;
+3. Commit your changes: `git commit -m 'Add some feature'`;
+4. Push to the branch: `git push origin my-new-feature`.
